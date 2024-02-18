@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL=mysql://root:password@localhost:3306/shopdb")
+  url = env("DATABASE_URL")
 }
 
 model Product {
@@ -29,5 +29,13 @@ model Order {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+model Client {
+  id      String @id @default(uuid())
+  name    String
+  address String
+
+  orders Order[]
+}
+
 
 
