@@ -2003,6 +2003,11 @@
   dependencies:
     "esutils" "^2.0.2"
 
+"dotenv@^16.4.4":
+  "integrity" "sha512-XvPXc8XAQThSjAbY6cQ/9PcBXmFoWuw1sQ3b8HqUCR6ziGXjkTi//kB9SWa2UwqlgdAIuRqAa/9hVljzPehbYg=="
+  "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-16.4.4.tgz"
+  "version" "16.4.4"
+
 "ee-first@1.1.1":
   "integrity" "sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow=="
   "resolved" "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz"
