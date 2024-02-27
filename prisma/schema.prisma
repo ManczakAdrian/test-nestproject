@@ -11,6 +11,8 @@ datasource db {
   url = env("DATABASE_URL")
 }
 
+
+
 model Product {
   id String  @id @default(uuid())
   name String
@@ -19,12 +21,15 @@ model Product {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  orders Order[]
 }
 
 
 model Order {
   id String  @id @default(uuid())
   productId String
+  product Product @relation(fields: [productId], references: [id])
   clientId String
   client Client @relation(fields: [clientId], references: [id])
   

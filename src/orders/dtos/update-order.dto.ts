@@ -5,6 +5,7 @@ export class UpdateOrderDTO {
   @IsString()
   @IsUUID()
   productId: string;
+  orderData: string;
 
   @IsNotEmpty()
   @IsString()
