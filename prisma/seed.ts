@@ -59,22 +59,26 @@ function getClients() {
   ];
 }
 
+
 function getOrders() {
   return [
     {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17260',
       productId: 'fd105551-0f0d-4a9f-bc41-c559c8a17256',
       clientId: 'fd105551-0f0d-4a9f-bc41-c559c8a17203',
+      address: '789 Pine Street, Seattle',
     },
     {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17261',
       productId: 'fd105551-0f0d-4a9f-bc41-c559c8a17256',
       clientId: 'fd105551-0f0d-4a9f-bc41-c559c8a17202',
+      address: '789 Pine Street, Seattle',
     },
     {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17262',
       productId: '01c7599d-318b-4b9f-baf7-51f3a936a2d4',
       clientId: 'fd105551-0f0d-4a9f-bc41-c559c8a17201',
+      address: '789 Pine Street, Seattle',
     },
   ];
 }
