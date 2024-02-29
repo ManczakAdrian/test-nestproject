@@ -11,5 +11,10 @@ export class CreateOrderDTO {
   @IsString()
   @IsUUID()
   clientId: string;
+
+  @IsNotEmpty()
+  @IsString()
+  address: string;
+
   
 }
