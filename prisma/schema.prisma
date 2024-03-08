@@ -34,6 +34,8 @@ model Order {
   product Product @relation(fields: [productId], references: [id])
   clientId String
   client Client @relation(fields: [clientId], references: [id])
+
+  
   
   address String
 
