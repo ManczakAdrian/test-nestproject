@@ -42,23 +42,19 @@ function getClients() {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17201',
       name: 'Alice Smith',
       address: 'Sunset Boulevard 34, Los Angeles',
-      orderId: 'fd105551-0f0d-4a9f-bc41-c559c8a17262',
     },
     {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17202',
       name: 'Bob Johnson',
       address: '456 Oak Street, San Francisco',
-      orderId: 'fd105551-0f0d-4a9f-bc41-c559c8a17261',
     },
     {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17203',
       name: 'Eve Wilson',
       address: '789 Pine Street, Seattle',
-      orderId: 'fd105551-0f0d-4a9f-bc41-c559c8a17260',
     },
   ];
 }
-
 
 function getOrders() {
   return [
@@ -84,6 +80,9 @@ function getOrders() {
 }
 
 async function seed() {
+  await db.product.deleteMany({});
+  await db.client.deleteMany({});
+  await db.order.deleteMany({});
   await Promise.all(
     getProducts().map((product) => {
       return db.product.create({ data: product });
@@ -91,7 +90,9 @@ async function seed() {
   );
   await Promise.all(
     getClients().map((client) => {
-      return db.client.create({ data: client });
+      return db.client.create({
+        data: client,
+      });
     }),
   );
   await Promise.all(
